@@ -25,6 +25,19 @@ body {
 .list {
   list-style: none;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* header styles */
 
@@ -57,6 +70,7 @@ body {
   letter-spacing: 0.09em;
   background-color: transparent;
   color: var(--tittle-text-color);
+  text-transform: uppercase;
 }
 /* hero */
 .about-suptittle,
@@ -78,7 +92,7 @@ body {
   font-family: var(--tittle-font);
   font-weight: 700;
   font-size: 72px;
-  line-height: 1.18;
+  line-height: 1.17;
   letter-spacing: 0.05em;
   color: var(--first-color);
 }
@@ -89,7 +103,11 @@ body {
   color: var(--secondary-white-text);
 }
 /* about */
-.about-tittle {
+.about-suptittle {
+  text-transform: uppercase;
+}
+.about-tittle,
+.benefits-tittle {
   font-family: var(--tittle-font);
   font-weight: 700;
   font-size: 42px;
@@ -144,6 +162,7 @@ body {
   line-height: 1.38;
   text-align: center;
   color: var(--accent-color);
+  vertical-align: top;
 }
 .benefits-txt {
   font-weight: 600;
@@ -159,7 +178,7 @@ body {
   text-transform: uppercase;
   color: var(--tittle-text-color);
 }
-.benefits-tittle {
+/* .benefits-tittle {
   font-family: var(--tittle-font);
   font-style: normal;
   font-weight: 700;
@@ -167,7 +186,7 @@ body {
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: var(--tittle-text-color);
-}
+} */
 .benefits-subtittle {
   font-weight: 400;
   font-size: 18px;
