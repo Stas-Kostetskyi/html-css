@@ -3,7 +3,7 @@
   --tittle-text-color: #303030;
   --accent-color: #ff6c00;
   --secondary-white-text: #9da4bd;
-  --section-hero-text: rgba(157, 164, 189, 0.6);
+  --section-text: rgba(157, 164, 189, 0.6);
   --first-color: #ffffff;
   --tittle-font: "Raleway", sans-serif;
 }
@@ -29,6 +29,9 @@ p {
 ul {
   margin: 0;
   padding: 0;
+}
+img {
+  display: block;
 }
 a {
   text-decoration: none;
@@ -119,10 +122,10 @@ a {
 .btn:focus {
   background-color: var(--accent-color);
   color: var(--first-color);
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
 }
-.about-button,
-.header-button,
-.services-button {
+.btn {
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -131,10 +134,17 @@ a {
   background-color: transparent;
   color: var(--tittle-text-color);
   text-transform: uppercase;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+}
+.services-button {
+  display: block;
+  margin: 0 auto;
+  color: var(--first-color);
 }
 
 /* hero */
-.about-suptittle,
+
 .hero-link {
   font-weight: 600;
   font-size: 11px;
@@ -142,27 +152,31 @@ a {
   color: var(--tittle-text-color);
 }
 
-.hero-suptittle,
-.services-suptittle {
+.uppertittle {
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.37;
-  color: var(--section-hero-text);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tittle-text-color);
 }
-.hero-tittle {
+.tittle {
+  margin-bottom: 44px;
   font-family: var(--tittle-font);
   font-weight: 700;
-  font-size: 72px;
+  font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: var(--first-color);
 }
-.hero-subtittle {
-  font-weight: 400;
+.undertittle {
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 1.67;
-  color: var(--secondary-white-text);
+  color: var(--primary-text-color);
 }
+
 /* about */
 .about-container {
   display: flex;
@@ -170,51 +184,65 @@ a {
 .about-list {
   display: flex;
   gap: 30px;
+  margin-right: 30px;
 }
-.about-suptittle {
-  text-transform: uppercase;
+.about-right {
+  width: 470px;
 }
-.about-tittle,
-.benefits-tittle {
-  font-family: var(--tittle-font);
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17px;
-  letter-spacing: 0.05em;
+
+.about-tittle {
+  margin-bottom: 20px;
   color: var(--tittle-text-color);
 }
-.about-subtittle {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: var(--primary-text-color);
-}
-.about-txt {
-  font-weight: 400;
+
+.about-descript {
+  margin-bottom: 42px;
   font-size: 14px;
   line-height: 1.86;
+  letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
 
 /* services */
 .services-tittle {
-  font-family: var(--tittle-font);
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
+  margin-bottom: 44px;
+
   color: var(--first-color);
 }
-.services-item-left,
-.services-item-right {
-  font-weight: 400;
+.services-upertittle {
+  color: var(--section-text);
+}
+.price-block {
+  display: flex;
+  margin-bottom: 44px;
+  justify-content: space-between;
+}
+.services-list {
+  flex-basis: 570px;
+  padding: 30px 20px;
+}
+.services-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.services-item {
+  display: flex;
   font-size: 18px;
   line-height: 1.67;
+  letter-spacing: 0.02em;
   color: var(--secondary-white-text);
+  align-items: baseline;
 }
-.services-item-right {
-  text-align: right;
+.line {
+  flex-grow: 1;
+  height: 1px;
+  margin: 0 12px;
+  background-color: rgba(157, 164, 189, 0.12);
 }
+
+.list {
+  outline: 1px solid tomato;
+}
+
 /* benefits */
 .benefits-number {
   font-weight: 700;
@@ -239,25 +267,56 @@ a {
   text-align: center;
   color: var(--tittle-text-color);
 }
-.benefits-suptittle {
+/* <!-- section our-barbers --> */
+.our-barbers-tittle {
+  color: var(--tittle-text-color);
+}
+.team-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.team-item {
+  flex-basis: calc((100% - 30px * 2) / 3);
+}
+.team-wrapper {
+  padding: 30px 10px 0;
+}
+.team-name {
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  color: var(--tittle-text-color);
+}
+.team-position {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+
+  color: var(--accent-color);
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+/* <!-- section gallery --> */
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.gallery-item {
+  flex-basis: calc((100% - 30px * 3) / 4);
+}
+.gallery-undertittle {
+  margin-bottom: 44px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+
   color: var(--tittle-text-color);
-}
-/* .benefits-tittle {
-  font-family: var(--tittle-font);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
-  color: var(--tittle-text-color);
-} */
-.benefits-subtittle {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  color: var(--primary-text-color);
 }
