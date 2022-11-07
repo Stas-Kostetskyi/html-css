@@ -16,13 +16,13 @@
 
 <body>
   <!-- header  -->
-  <header>
+  <header class="header" data-header>
     <div class="header-container container">
       <a class="header-link link" href=""><img src="./images/logo.svg" alt="logo" /></a>
       <nav class="header-nav">
         <ul class="header-list list">
           <li class="header-item">
-            <a href="" class="header-nav-link link">About</a>
+            <a href="" class="header-nav-link current link">About</a>
           </li>
           <li class="header-item">
             <a href="" class="header-nav-link link">Services and prices</a>
@@ -47,15 +47,17 @@
     <!-- main -->
     <!-- section hero -->
     <section class="hero">
-      <div class="container">
-        <ul class="hero-list list">
-          <li>
-            <a href="" class="hero-link link" target="_blank" rel="noopener noreferer nofolow">Youtube</a>
-          </li>
-          <li>
-            <a href="" class="hero-link link" target="_blank" rel="noopener noreferer nofolow">Instagram</a>
-          </li>
-        </ul>
+      <div class="hero-container container">
+        <div class="hero-left-side">
+          <ul class="hero-media-list list">
+            <li class="hero-media-item">
+              <a href="" class="hero-media-link link" target="_blank" rel="noopener noreferer nofolow">Youtube</a>
+            </li>
+            <li class="hero-media-item">
+              <a href="" class="hero-media-link link" target="_blank" rel="noopener noreferer nofolow">Instagram</a>
+            </li>
+          </ul>
+        </div>
         <div class="hero-right-side">
           <p class="uppertittle">A hair salon for men in Kyiv</p>
           <h1 class="tittle tittle-hero">BarberShop</h1>
@@ -64,12 +66,12 @@
             and with style.
           </p>
         </div>
-        <ul class="slider-list list">
+        <ul class="slider-controls list">
           <li class="slider-item">
-            <button class="slider-btn">Back</button>
+            <button class="slider-btn disable">Back</button>
           </li>
           <li class="slider-item">
-            <button class="slider-btn">Forward</button>
+            <button class="slider-btn ">Forward</button>
           </li>
         </ul>
       </div>
@@ -404,6 +406,8 @@
       </ul>
     </div>
   </footer>
+
+  <script src="./js/header-scroll.js"></script>
 </body>
 
 </html>
